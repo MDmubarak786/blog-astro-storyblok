@@ -1,0 +1,12 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+ 
+ const { blok } = Astro.props
+ ---
+  
+ <div
+   {...storyblokEditable(blok)}
+   class='rounded-[5px] text-center'
+ >
+   <img src={blok.Logoimage.filename} class="w-24 h-6" />
+ </div>

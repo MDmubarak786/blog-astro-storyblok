@@ -1,0 +1,14 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+ 
+const { blok } = Astro.props
+---
+ 
+<div {...storyblokEditable(blok)}>
+  <div
+  class='container font-bold mx-auto grid md:grid-cols-3 gap-12 my-12 place-items-center'
+>
+      <div><h1 class=" font-bold text-red-700">{blok.headline}</h1></div>
+      <div><h1>{blok.headline}</h1></div>
+</div>
+</div>
