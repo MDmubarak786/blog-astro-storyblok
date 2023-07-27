@@ -1,0 +1,23 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+ 
+ const { blok } = Astro.props
+
+ import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
+
+ ---
+  
+ <div {...storyblokEditable(blok)} >
+   <div class='w-full text-center'>
+        <div class="flex flex-row">
+          <img src={blok.Profile.filename} class=" w-20 h-20 rounded-full"/>
+          <div class=" px-4 flex flex-col gap-1">
+            <div  class=" flex text-left"> <RichTextRenderer richTextData={blok.Name} /> </div>
+            <p class=" text-[12px] text-[#666666]">{blok.Activity}</p>
+            <div class=" flex text-left"><img src={blok.SocialIcons.filename} class=" w-15 h-5"/></div>
+          </div>
+          
+        </div>
+    </div>
+
+ </div>

@@ -4,6 +4,7 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
 import profile from '/logo.png'
 import PopularPosted from './PopularPosted.astro'
 import RecentlyPosted from './RecentlyPosted.astro'
+import Authors from './Authors.astro'
  
 const { blok } = Astro.props
 ---
@@ -37,6 +38,7 @@ const { blok } = Astro.props
 </div>
 
 </div>
+<div class="flex xl:flex-row justify-between p-5 flex-col">
 <div class=" w-fit">
   <ul class='w-fit'>
   {
@@ -45,5 +47,6 @@ const { blok } = Astro.props
     })
   }
   </ul>
+</div>
 </div>
 </div>

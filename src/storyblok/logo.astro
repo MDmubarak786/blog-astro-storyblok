@@ -6,7 +6,9 @@ import { storyblokEditable } from '@storyblok/astro'
   
  <div
    {...storyblokEditable(blok)}
-   class='rounded-[5px] text-center'
  >
-   <img src={blok.Logoimage.filename} class="w-24 h-6" />
+ <div class=" border border-[#A3A7A8] bg-red-800 ">
+  <img src={blok.Logoimage.filename} class="w-24 h-6 bg-red-700"></img>
+  </div>
+  
  </div>
