@@ -3,8 +3,10 @@ import storyblok from '@storyblok/astro';
 import { loadEnv } from 'vite';
 import tailwind from "@astrojs/tailwind";
 import basicSsl from '@vitejs/plugin-basic-ssl';
+import vercel from "@astrojs/vercel/serverless";
 const env = loadEnv("", process.cwd(), 'STORYBLOK');
 console.log(env);
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,13 +22,13 @@ export default defineConfig({
       Categories: 'storyblok/Categories',
       About: 'storyblok/Homepages',
       Pages: 'storyblok/Homepages',
-      Logo:'storyblok/logo',
-      Banner:'storyblok/Banner',
-      Blog:'storyblok/Blog',
-      PopularPosted:'storyblok/PopularPosted',
-      TopAuthors:'storyblok/TopAuthors',
-      Authors:'storyblok/Authors',
-      Typesofcategories:'storyblok/Typesofcategories',
+      Logo: 'storyblok/logo',
+      Banner: 'storyblok/Banner',
+      Blog: 'storyblok/Blog',
+      PopularPosted: 'storyblok/PopularPosted',
+      TopAuthors: 'storyblok/TopAuthors',
+      Authors: 'storyblok/Authors',
+      Typesofcategories: 'storyblok/Typesofcategories'
     },
     apiOptions: {
       region: "EU"
@@ -37,5 +39,7 @@ export default defineConfig({
     server: {
       https: true
     }
-  }
+  },
+  output: "server",
+  adapter: vercel()
 });
