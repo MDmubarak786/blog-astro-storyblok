@@ -7,8 +7,10 @@ import { storyblokEditable } from '@storyblok/astro'
  <div
    {...storyblokEditable(blok)}
  >
- <div class=" border border-[#A3A7A8] bg-red-800 ">
-  <img src={blok.Logoimage.filename} class="w-24 h-6 bg-red-700"></img>
+ <div class=" border border-[#A3A7A8]  ">
+  <a href={blok.logoLink}>
+  <img src={blok.Logoimage.filename} class="w-6 p-1 h-6"></img>
+</a>
   </div>
   
  </div>

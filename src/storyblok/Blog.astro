@@ -7,7 +7,7 @@ const { blok } = Astro.props
 ---
 <div {...storyblokEditable(blok)}>
   <div class="w-fit ">
-
+{blok.FeaturedThisMonth ? <div>
 <div class="p-4 flex flex-col ">
     <div class="py-4 ">
            <h1 class="text-[12px] text-[#666666] bg-travel w-fit h-fit p-0.5 " >{blok.Travel}</h1>
@@ -22,7 +22,7 @@ const { blok } = Astro.props
     </div>
     <div class="flex flex-row pb-3 text-[#777777] items-center text-[12px] gap-x-5"> 
          <div class="flex flex-row"> 
-            <img src={blok.Profile.filename} ></img>    
+            <img src={blok.Profile.filename} class="w-15 h-5 rounded-3xl" ></img>    
         <p class="text-[#777777]">{blok.Name}</p>
          </div>
         <p class="text-[14px]">|</p>
@@ -45,6 +45,6 @@ const { blok } = Astro.props
     <h1 class="md:w-[401px] text-[#555555] ">{blok.Description}</h1>
     </div>
 </div>
-
+</div>:null}
 </div>
 </div>

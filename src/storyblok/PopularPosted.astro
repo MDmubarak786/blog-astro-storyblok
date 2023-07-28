@@ -7,10 +7,9 @@ const { blok } = Astro.props
 ---
 <div {...storyblokEditable(blok)}>
   <div class=" w-full p-4 justify-center flex">
-
+    {blok.PopularPost ? <div>
 <div class="p-4 flex flex-col ">
-  <div class="pt-4 space-y-2">
-    <img src={blok.Image.filename} class="md:h-[229px] md:w-[401px] w-fit  max-h-[201px]"></img>
+  <div class=" space-y-2">
     <h1 class="text-[12px] text-[#666666] bg-travel w-fit h-fit p-0.5 " >{blok.Travel}</h1>
 </div>
 <div>
@@ -18,7 +17,7 @@ const { blok } = Astro.props
 </div>
 <div class="py-2 flex flex-row pb-3 text-[#777777] items-center text-[12px] gap-x-5"> 
 <div class="flex flex-row gap-2">
-  <img src={blok.Profile.filename} ></img>       
+  <img src={blok.Profile.filename} class="w-15 h-5 rounded-full" ></img>       
 <p class="text-[#777777]">{blok.Name}</p>
 </div>
 <p class="text-[14px]">|</p>
@@ -41,6 +40,7 @@ const { blok } = Astro.props
 <h1 class="md:w-[361px] px-4 text-[#555555] text-[15px] ">{blok.Description}</h1>
 </div>
 </div>
+</div> :null}
 
 
 </div>
