@@ -1,18 +1,16 @@
 ---
-import { storyblokEditable } from '@storyblok/astro'
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import { storyblokEditable } from '@storyblok/astro';
 import TopAuthors from './TopAuthors.astro';
- 
-const { blok } = Astro.props
+
+const { blok } = Astro.props;
 ---
- 
+
 <div {...storyblokEditable(blok)}>
-  <div
-    class='p-4'
-  >
-  <div class="flex flex-col  w-fit ">
-    
-    <div>
-  <TopAuthors blok={blok} />
+  <div class='p-4'>
+    <div class='flex flex-col w-fit'>
+      <div>
+        <TopAuthors blok={blok} />
+      </div>
+    </div>
   </div>
 </div>

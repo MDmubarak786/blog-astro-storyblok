@@ -9,6 +9,7 @@ const { blok } = Astro.props
   <div class="w-fit ">
 {blok.FeaturedThisMonth ? <div>
 <div class="p-4 flex flex-col ">
+  <a href="blogs/blog1">
     <div class="py-4 ">
            <h1 class="text-[12px] text-[#666666] bg-travel w-fit h-fit p-0.5 " >{blok.Travel}</h1>
     </div>
@@ -44,6 +45,7 @@ const { blok } = Astro.props
     <div class="w-fit">
     <h1 class="md:w-[401px] text-[#555555] ">{blok.Description}</h1>
     </div>
+  </a>
 </div>
 </div>:null}
 </div>

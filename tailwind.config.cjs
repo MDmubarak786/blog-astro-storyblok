@@ -11,10 +11,15 @@ module.exports = {
 				header: '#E8F3F3', 
 				travel:'#DFF1F0',
 				},
+				lineHeight:{
+					'140':'140%'
+				}
 			
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('tailwind-scrollbar'),
+	],
 }
 
 

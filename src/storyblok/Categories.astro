@@ -1,20 +1,22 @@
 ---
-import { storyblokEditable } from '@storyblok/astro'
+import { storyblokEditable } from '@storyblok/astro';
 
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
- 
- const { blok } = Astro.props
- ---
-  
- <div {...storyblokEditable(blok)}>
-    <div class="p-4 flex flex-col gap-y-4">
-        <h1 class=" bg-[#00AAA1] h-fit w-fit text-white font-bold px-3">Categories </h1>
-    <ul class="flex flex-col gap-y-3 w-fit">
-    {
-      blok.categories?.map((blok) => {
-        return <StoryblokComponent blok={blok} />
-      })
-    }
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class='p-4 flex flex-col gap-y-4'>
+    <h1 class='bg-[#00AAA1] h-fit w-fit text-white font-bold px-3'>
+      Categories
+    </h1>
+    <ul class='flex flex-col gap-y-3 w-fit'>
+      {
+        blok.categories?.map((blok) => {
+          return <StoryblokComponent blok={blok} />;
+        })
+      }
     </ul>
+  </div>
 </div>
- </div>

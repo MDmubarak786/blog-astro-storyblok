@@ -1,0 +1,33 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+import Author from './author.astro';
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class='w-full h-full p-10 flex'>
+    <div class=''>
+      <div class='py-3'>
+        <h1 class='text-[12px] text-[#666666] bg-travel w-fit h-fit p-0.5'>
+          {blok.category}
+        </h1>
+      </div>
+      <div class=''>
+        <h1
+          class='text-[27px] font-semibold capitalize line-height-140 w-fit h-fit p-0.5'
+        >
+          {blok.heading}
+        </h1>
+      </div>
+      <div class='max-w-[856px] max-h-[432px]'>
+        <img src={blok.image.filename} class='w-full h-fit' />
+        <h1 class='text-[15px] text-[#666] py-5 text-justify pr-5'>
+          {blok.description}
+        </h1>
+        {blok.author}
+        <div><Author blok={blok.author} /></div>
+      </div>
+    </div>
+  </div>
+</div>

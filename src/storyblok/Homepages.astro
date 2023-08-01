@@ -1,11 +1,11 @@
 ---
-import { storyblokEditable } from '@storyblok/astro'
- 
- const { blok } = Astro.props
- ---
-  
- <div {...storyblokEditable(blok)}>
-   <h3 class=' align-bottom text-[#33333] shadow-black '>
-     {blok.Title}
-   </h3>
- </div>
+import { storyblokEditable } from '@storyblok/astro';
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <h3 class='align-bottom text-[#33333] shadow-black'>
+    {blok.Title}
+  </h3>
+</div>

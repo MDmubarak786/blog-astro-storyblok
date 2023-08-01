@@ -1,0 +1,15 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+
+const { blok } = Astro.props;
+---
+
+<div {...storyblokEditable(blok)}>
+  <div class='w-full text-center'>
+    <div class='flex flex-row'>
+      <h1>{blok.headline}</h1>
+      <p>{blok.subheadline}</p>
+      <img src={blok.image.filename} />
+    </div>
+  </div>
+</div>
